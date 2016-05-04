@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Specifcity</title>
+	<style type="text/css" media="screen">
+		body{
+			color: red;
+			background: black;
+		}
+		p{
+			color: green;
+		}
+		li{
+			color: purple;
+		}
+		ul{
+			color:red;
+		}
+		.highlight{
+			color:yellow;
+		}
+		#special{
+			color:pink;
+		}
+	</style>
+</head>
+<body>
+
+<p>Hello!</p>
+
+<ul>
+	<li id="special" class="highlight">John</li>
+	<li>Paul</li>
+	<li>George</li>
+	<li class="highlight">Ringo</li>
+
+</ul>
+
+</body>
+</html>

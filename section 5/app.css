@@ -1,0 +1,25 @@
+h1 {
+    color: red;
+/*    border-color: purple;
+    border-width: 5px;
+    border-style: solid;*/
+
+    border: 8px dashed purple;
+}
+
+li {
+    color: green;
+}
+
+h4 {
+    color: yellow;
+}
+
+body {
+	background: pink;
+    /*background: url(http://wallpapercave.com/wp/zVTJgrz.jpg)*/
+}
+
+div {
+    background: purple;
+}

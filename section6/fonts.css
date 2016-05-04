@@ -1,0 +1,34 @@
+/*General Font-family*/
+
+h1{
+	font-family: "georgia";
+}
+
+p{
+	font-family: "arial";
+}
+
+/*Font size*/
+h1{
+	font-family: 'Fjalla One', sans-serif;
+	font-size: 50px;
+	text-align: center;
+	text-decoration: line-through;
+}
+
+/*Font-weight*/
+p{
+	font-family: 'Poiret One', cursive;
+	font-weight: bold;
+}
+
+/*Line Height*/
+p{
+	line-height: 2;
+}
+
+/*Text Align*/
+p{
+	text-decoration: underline;
+	text-align: center;
+}
