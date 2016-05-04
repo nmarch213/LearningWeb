@@ -1,5 +1,19 @@
+body{
+	background: #f1f1f1;
+}
+
 img{
 	width: 30%;
 	float: left;
 	margin: 1.66%;
+}
+p{
+	font-family: lobster;
+	margin-left: 1.66%;
+	padding-bottom: 20px;
+	font-size: 23px;
+	text-transform: uppercase;
+	font-weight: 800;
+	border-bottom: 2px solid black;
+	width: 30%;
 }
