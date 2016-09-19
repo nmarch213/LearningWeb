@@ -1,0 +1,13 @@
+
+<h1>The Posts</h1>
+
+<ul>
+	{{#each post}}
+	<li>{{name}}</li>
+	{{/each}}
+</ul>
+
+<form action="/addpost" method="post">
+	<input type="text" name="newPost" value="" placeholder="post">
+	<button type="">I made a new post!</button>
+</form>
