@@ -1,0 +1,11 @@
+<h1>Index Page!</h1>
+
+{{#each blogs}}
+	<div>
+		<h2>{{title}}</h2>
+		<img src={{image}} alt="Blog picture">
+		<span>{{created}}</span>
+		<p>{{body}}</p>
+		<a href="/blogs/{{_id}}">Read More</a>
+	</div>
+{{/each}}
