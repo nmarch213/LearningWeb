@@ -2,6 +2,7 @@ var express = require("express");
 var mongoose = require("mongoose");
 var bodyParser = require("body-parser");
 var methodOverride = require("method-override");
+var expressSanitizer = require("express-sanitizer");
 app = express();
 
 mongoose.connect("mongodb://njm24:test@ds041536.mlab.com:41536/myblog_udemy");
@@ -16,6 +17,7 @@ app.set('view engine', 'handlebars');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('public'));
 app.use(methodOverride("_method"));
+app.use(expressSanitizer());
 
 //mongoose schema
 var blogSchema = new mongoose.Schema({
@@ -75,6 +77,7 @@ app.get("/blogs/new", function(req, res){
 //CREATE ROUTE
 app.post("/blogs", function(req, res){
 	//create
+	req.body.blog.body = req.sanitize(req.body.blog.body);
 	Blog.create(req.body.blog, function(err, newBlog){
 		if(err)
 			res.render("new");
@@ -97,6 +100,8 @@ app.get("/blogs/:id/edit", function(req, res){
 
 //UPDATE ROUTE
 app.put("/blogs/:id", function(req, res){
+	//update and sanitize for no scripts
+	req.body.blog.body = req.sanitize(req.body.blog.body);
 	Blog.findByIdAndUpdate(req.params.id, req.body.blog, function(err, updatedBlog){
 		if(err)
 		{
