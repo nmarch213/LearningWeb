@@ -4,18 +4,13 @@ var mongoose = require("mongoose");
 
 var app = express();
 
+//Models
+Campground = require("./models/campground");
+// Comment = require("./models/comment");
+
 //MongoDB 
 mongoose.connect("mongodb://njm24:testpass@ds035776.mlab.com:35776/yelpcampnjm24");
 
-//Schema
-var campgroundSchema = new mongoose.Schema(
-	{
-		name: String,
-		image: String,
-		description: String
-	});
-
-var Campground = mongoose.model("Campground", campgroundSchema);
 
 // Campground.create(
 // 	{
