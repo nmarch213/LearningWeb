@@ -9,6 +9,10 @@
 			<div class="description">
 				<p>{{blog.body}}</p>
 			</div>
+			<a href="/blogs/{{blog.id}}" class="ui orange basic button">Edit</a>
+			<form id="delete" method="POST" action="/blogs/{{blog.id}}?_method=DELETE">
+				<button class="ui red basic button">Delete</button>
+			</form>
 		</div>
 	</div>
 </div>
